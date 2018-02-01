@@ -10,19 +10,13 @@ var makeRequest = function(url, callback){
   request.send();
 }
 
-var requestComplete = function(){
-  if(this.status !== 200) return;
-  var jsonString = this.responseText;
-  var beers = JSON.parse(jsonString);
+var getImage = function(beer){
+  var img = document.createElement('img');
+  img.src = beer.image_url;
+  img.width = "20";
+  return img;
 }
 
-
-var requestComplete = function(){
-  if(this.status !== 200) return;
-  var jsonString = this.responseText;
-  var beers = JSON.parse(jsonString);
-  var beer = beers[0];
-}
 
 var requestComplete = function(){
   if(this.status !== 200) return;
@@ -31,14 +25,13 @@ var requestComplete = function(){
   populateList(beers);
 }
 
-
-
 var populateList = function(beers){
   var ul = document.getElementById('beer-list');
 
   beers.forEach(function(beer){
     var li = document.createElement('li');
     li.innerText = beer.name;
+    li.appendChild(getImage(beer));
     ul.appendChild(li);
   });
 }
