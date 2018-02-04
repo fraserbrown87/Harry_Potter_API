@@ -1,17 +1,36 @@
-main{
-  width: 300px;
-  margin: 0 auto;
+
+header {
+  font-family: 'Henny Penny', cursive;
+  background-color: rgb(255, 217, 2);
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 1em;
+  padding: 0.2em;
 }
 
-input{
-  padding: 10px;
-  border-radius: 5px;
-  width: 400px;
-  font-size: 22px;
-  margin: 10px;
+#character-list{
+  display: grid;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  color: gold;
+  max-width: 30em;
+  padding: 2em;
+  align-content: center;
+  text-align: center;
 }
 
-.album{
-  padding: 5px;
+img {
+  max-height: auto;
+  margin: 0.5em auto;
+  border: 0.2em solid black;
+  padding: 0.3em;
+
+
 }
 
+body, html {
+    height: 100%;
+   background-image: url("https://data.whicdn.com/images/67769528/original.jpg");
+   background-color: #cccccc;
+}
