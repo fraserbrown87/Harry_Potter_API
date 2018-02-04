@@ -25,6 +25,7 @@ var handleButtonClick = function () {
 
 var formDropdown = function(characters){
   var select = document.querySelector('#character-dropdown')
+  
   var optionAtTop = document.createElement('option');
   optionAtTop.innerText = "Select a character";
   optionAtTop.disabled = true;
