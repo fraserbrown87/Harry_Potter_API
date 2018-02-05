@@ -23,9 +23,10 @@ var handleButtonClick = function () {
   localStorage.setItem('character', character);
 }
 
+
 var formDropdown = function(characters){
   var select = document.querySelector('#character-dropdown')
-  
+
   var optionAtTop = document.createElement('option');
   optionAtTop.innerText = "Select a character";
   optionAtTop.disabled = true;
@@ -38,6 +39,8 @@ var formDropdown = function(characters){
     select.appendChild(option);
   })
 }
+
+
 
 var populateList = function(characters){
   var ul = document.querySelector('#character-list');
@@ -65,11 +68,10 @@ var requestComplete = function(){
   if(this.status !== 200) return;
 
   var jsonString = this.responseText;
-  var characters = JSON.parse(jsonString); //NEW
+  var characters = JSON.parse(jsonString);
   populateList(characters);
   populateDropdown(characters);
   formDropdown(characters);
-
 }
 
 // var jsonString = JSON.stringify(character) // NEW
